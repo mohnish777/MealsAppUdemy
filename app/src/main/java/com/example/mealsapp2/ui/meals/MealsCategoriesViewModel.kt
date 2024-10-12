@@ -10,6 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MealsCategoriesViewModel(private val repository: MealsRepository = MealsRepository()): ViewModel() {
+
     init {
         viewModelScope.launch(Dispatchers.IO) {
             val meals: List<MealResponse> = getMeals()
